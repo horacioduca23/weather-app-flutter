@@ -1,16 +1,18 @@
 # weather_app_flutter
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+A simple Weather App made by Flutter. The idea is let users search for current weather for a particulary city.
 
-A few resources to get you started if this is your first Flutter project:
+https://www.loom.com/share/95ddc3da70424d80820e7aa72887244e
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Implemented features:  
+  - Predefined cities : "Montevideo", "Londres", "San Pablo", "Buenos Aires" and "Munich".
+  - When user taps on one of it, it'll be redirected to the details screen with detailed weather information retrieved from OpenWeatherMap.com.
+  - User can ask for permission to access to their GPS location and get current weather at that place.
+  - User can search for any city in the world provided by GooglePlaces services.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## TODO features:
+  - When user search for a particularly city and taps on it, it should show the current weather for that location.
+
+
