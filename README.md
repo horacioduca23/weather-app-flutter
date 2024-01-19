@@ -25,4 +25,24 @@ https://www.loom.com/share/95ddc3da70424d80820e7aa72887244e
 ## TODO features:
   - When user search for a particularly city and taps on it, it should show the current weather for that location.
 
+## Implemented packages: 
+  - http: ^1.2.0
+  - riverpod_annotation:
+  - flutter_riverpod: ^2.4.9
+  - go_router: ^13.0.1
+  - geolocator: ^10.1.0
+  - google_maps_flutter: ^2.2.8
+  - google_places_flutter: ^2.0.7
+  - geocoding: ^2.1.1
+  - flutter_dotenv: ^5.1.0
+  - lottie: ^3.0.0
+  - flutter_typeahead: ^5.0.2
+
+## Dev dependencies:
+  - flutter_lints: ^2.0.0
+  - riverpod_generator: ^2.3.9
+  - build_runner: ^2.4.8
+  - custom_lint: ^0.5.8
+  - riverpod_lint: ^2.3.7
+
 
