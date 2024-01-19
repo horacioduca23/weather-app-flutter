@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:label="weather_app_flutter"
         android:name="${applicationName}"
@@ -29,5 +31,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCd07Kz5n165BQn4-urqmIU4WkqSAFWm-g"/>
     </application>
 </manifest>
