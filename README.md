@@ -6,13 +6,11 @@ A simple Weather App made by Flutter. The idea is let users search for current w
 
 ## Screenshots
 
-  -------------------------------------------------------------------------------------------------------------------
 | ![image](https://github.com/horacioduca23/weather-app-flutter/assets/55465024/e25d8a60-7d28-4e96-bb89-045ef7bed0b0) |
   -------------------------------------------------------------------------------------------------------------------
 | ![image](https://github.com/horacioduca23/weather-app-flutter/assets/55465024/99be764e-96cd-4cd5-8d76-4792c3beb59c) |
   -------------------------------------------------------------------------------------------------------------------
 | ![image](https://github.com/horacioduca23/weather-app-flutter/assets/55465024/0bc4aa3d-d4eb-4a40-86d2-05abafd2e13b) |
-  -------------------------------------------------------------------------------------------------------------------
 
 ## VIDEO DEMO
 
