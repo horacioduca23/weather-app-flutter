@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../constants/strings.dart';
 import '../../data/datasources/network_utility.dart';
 import '../../data/dtos/google_autocomplete_dto.dart';
 import '../controllers/selected_city_controller.dart';
@@ -24,13 +25,10 @@ class LocationTextFieldState extends ConsumerState<LocationTextField> {
   Widget build(BuildContext context) {
     void placeAutocomplete(String query) async {
       String apiKey = dotenv.env['GOOGLE_API_KEY']!;
-      String googleMapsApi = dotenv.env['GOOGLE_MAPS_API']!;
-      String googlePlacesAutocomplete =
-          dotenv.env['GOOGLE_PLACES_AUTOCOMPLETE']!;
 
       final Uri uri = Uri.https(
-        googleMapsApi,
-        googlePlacesAutocomplete,
+        Strings.googleMapsApi,
+        Strings.googlePlacesAutocompleteUrl,
         {
           'input': query,
           'types': '(cities)',
