@@ -17,4 +17,5 @@ class Strings {
   static const String googleMapsApi = 'maps.googleapis.com';
   static const String googlePlacesAutocompleteUrl =
       '/maps/api/place/autocomplete/json';
+  static const String searchYourLocation = 'Search your location';
 }

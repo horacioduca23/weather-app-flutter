@@ -18,4 +18,14 @@ class WeatherRepository {
 
     return weather;
   }
+
+  Future<String?> fetchCityNameByCurrent(
+    double latitude,
+    double longitude,
+  ) async {
+    final cityName =
+        await _weatherDataSource.fetchCityNameByCurrent(latitude, longitude);
+
+    return cityName;
+  }
 }

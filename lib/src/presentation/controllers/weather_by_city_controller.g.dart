@@ -7,7 +7,7 @@ part of 'weather_by_city_controller.dart';
 // **************************************************************************
 
 String _$weatherByCityControllerHash() =>
-    r'426693a483a84b92611ba240b0427a7a2672aec4';
+    r'4aaed0ace55692dbb602b272d15e87f1f7f37bc2';
 
 /// See also [WeatherByCityController].
 @ProviderFor(WeatherByCityController)

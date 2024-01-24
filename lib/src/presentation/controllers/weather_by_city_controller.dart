@@ -35,4 +35,29 @@ class WeatherByCityController extends _$WeatherByCityController {
 
     return weather;
   }
+
+  Future<String?> fetchCityNameByCurrent(
+    double latitude,
+    double longitude,
+  ) async {
+    String? cityName;
+
+    try {
+      final weatherRepository = ref.read(weatherRepositoryProvider);
+
+      final result = await AsyncValue.guard(
+        () => weatherRepository.fetchCityNameByCurrent(latitude, longitude),
+      );
+
+      result.whenData((value) {
+        if (value != null) {
+          return cityName = value;
+        }
+      });
+    } on Exception catch (ex, stack) {
+      state = AsyncValue.error(ex, stack);
+    }
+
+    return cityName ?? '';
+  }
 }

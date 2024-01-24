@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../widgets/location_text_field.dart';
 
 import '../../constants/strings.dart';
 import '../../constants/assets.dart';
@@ -17,6 +18,7 @@ class WeatherPage extends ConsumerWidget {
         ref.watch(locationPermissionControllerProvider);
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: DecoratedBox(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -46,6 +48,7 @@ class WeatherPage extends ConsumerWidget {
                   letterSpacing: 0.37,
                 ),
               ),
+              const LocationTextField(),
               const DefaultCities(),
               const SizedBox(
                 height: 30.0,

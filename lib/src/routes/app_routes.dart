@@ -1,5 +1,6 @@
 enum AppRoutes {
   home('/'),
+  current('current'),
   details('details');
 
   const AppRoutes(

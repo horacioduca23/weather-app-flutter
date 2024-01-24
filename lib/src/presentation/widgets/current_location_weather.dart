@@ -14,71 +14,74 @@ class CurrentLocationWeather extends ConsumerWidget {
 
     return weatherData.when(
       data: (weather) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              weather?.cityName ?? '',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 46,
-                fontFamily: 'SF Pro Display',
-                fontWeight: FontWeight.w400,
-                height: 0.02,
-                letterSpacing: 0.37,
-              ),
-            ),
-            const SizedBox(
-              height: 10.0,
-            ),
-            Lottie.asset(
-              getWeatherAnimation(weather?.mainCondition),
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              '${weather?.temperature.ceilToDouble()}°C',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 70,
-                fontFamily: 'SF Pro Display',
-                fontWeight: FontWeight.w400,
-                height: 0.02,
-                letterSpacing: 0.37,
-              ),
-            ),
-            const SizedBox(
-              height: 60.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'H:${weather?.maxTemperature.ceil().toString()}°C / L:${weather?.minTemperature.ceil().toString()}°C',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontFamily: 'SF Pro Display',
-                    fontWeight: FontWeight.w800,
-                    height: 0.11,
-                    letterSpacing: -0.08,
-                  ),
+        return Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                weather?.cityName ?? '',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontFamily: 'SF Pro Display',
+                  fontWeight: FontWeight.w400,
+                  height: 0.02,
+                  letterSpacing: 0.37,
                 ),
-                Text(
-                  'W:${weather?.windSpeed.toString()} km/h',
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18.0,
-                    fontFamily: 'SF Pro Display',
-                    fontWeight: FontWeight.w800,
-                    height: 0.11,
-                    letterSpacing: -0.08,
-                  ),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              Lottie.asset(
+                getWeatherAnimation(weather?.mainCondition),
+                height: 100,
+              ),
+              const SizedBox(
+                height: 25.0,
+              ),
+              Text(
+                '${weather?.temperature.ceil()}°C',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 70,
+                  fontFamily: 'SF Pro Display',
+                  fontWeight: FontWeight.w400,
+                  height: 0.02,
+                  letterSpacing: 0.37,
                 ),
-              ],
-            ),
-          ],
+              ),
+              const SizedBox(
+                height: 60.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'H:${weather?.maxTemperature.ceil().toString()}°C / L:${weather?.minTemperature.ceil().toString()}°C',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                      fontFamily: 'SF Pro Display',
+                      fontWeight: FontWeight.w800,
+                      height: 0.11,
+                      letterSpacing: -0.08,
+                    ),
+                  ),
+                  Text(
+                    'W:${weather?.windSpeed.toString()} km/h',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                      fontFamily: 'SF Pro Display',
+                      fontWeight: FontWeight.w800,
+                      height: 0.11,
+                      letterSpacing: -0.08,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         );
       },
       error: (error, stack) => Text(

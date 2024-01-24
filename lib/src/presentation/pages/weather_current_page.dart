@@ -33,8 +33,8 @@ String getWeatherAnimation(String? mainCondition) {
   }
 }
 
-class WeatherDetailPage extends ConsumerWidget {
-  const WeatherDetailPage({
+class WeatherCurrentPage extends ConsumerWidget {
+  const WeatherCurrentPage({
     super.key,
   });
 
@@ -83,7 +83,7 @@ class WeatherDetailPage extends ConsumerWidget {
                   height: 30.0,
                 ),
                 Text(
-                  '${weather?.temperature.ceil()}°C',
+                  '${weather?.temperature.ceilToDouble()}°C',
                   style: TextStyle(
                     color: now.hour >= 15 ? Colors.white : Colors.black,
                     fontSize: 100,

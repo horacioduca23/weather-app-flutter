@@ -32,4 +32,30 @@ class WeatherDataSource implements IWeatherDataSource {
 
     return weatherDTO;
   }
+
+  @override
+  Future<String?> fetchCityNameByCurrent(
+      double latitude, double longitude) async {
+    String? cityName;
+    WeatherDTO weatherDTO;
+
+    final response = await client.get(
+      Uri.parse(
+        '${Strings.baseUrl}?lat=$latitude&lon=$longitude&appid=$apiKey',
+      ),
+    );
+
+    if (response.statusCode == 200) {
+      weatherDTO = WeatherDTO.fromJson(
+        json.decode(response.body),
+      );
+      cityName = weatherDTO.cityName;
+    } else {
+      throw Exception(
+        'Error Fetching Data, Http Status Code == "${response.statusCode}"',
+      );
+    }
+
+    return cityName;
+  }
 }
